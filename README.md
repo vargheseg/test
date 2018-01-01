@@ -1,6 +1,6 @@
 ##### Project Structure:
 
-```
+``` 
        +--------+
     +->+main.cpp+<-+
     |  +--------+  |
@@ -17,5 +17,5 @@
          +----+
 
 ModA <- ModC: Module A
-   depends on ModC
+ depends on Module C
 ```
