@@ -1,4 +1,4 @@
-This repo was created to go with the question asked [here](https://cmake.org/pipermail/cmake/2018-January/066812.html). Intended to test target_* cmake commands for describing a modular build structure.
+This repo was created to go with the question asked [here](https://cmake.org/pipermail/cmake/2018-January/066812.html). Intended to use target_* cmake commands for describing a modular build structure.
 
 ##### Project Structure:
 
