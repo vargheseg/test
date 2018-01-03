@@ -1,5 +1,8 @@
-#include<iostream>
+#include <iostream>
+#include <a.h>
+#include <b.h>
 
 int main() {
-  return 0;
+  fn1();
+  return fn2();
 }

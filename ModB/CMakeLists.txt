@@ -1,6 +1,5 @@
-include(${CMAKE_CURRENT_LIST_DIR}/../ModC/CMakeLists.txt)
-
-add_library(ModB b.cpp)
-target_link_libraries(ModB 
-	PRIVATE
-          ModC)
+add_library(ModB b.cc)
+target_include_directories(ModB 
+	PUBLIC 
+	  public_includes)
+target_link_libraries(ModB PRIVATE ModC)

@@ -1,6 +1,6 @@
-ifndef B_H
+#ifndef B_H
 #define B_H
 
-void fn2();
+int fn2();
 
 #endif

@@ -1,6 +1,6 @@
-ifndef C_H
+#ifndef C_H
 #define C_H
 
-void fn1();
+int fn1();
 
 #endif
