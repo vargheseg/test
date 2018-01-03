@@ -43,3 +43,53 @@ This repo was created to go with the question asked [here](https://cmake.org/pip
 ModA <- ModC: Module A
  depends on Module C
 ```
+
+
+```
+------------------------------------
+CMakeLists.txt
+------------------------------------
+cmake_minimum_required(VERSION 3.0)
+project(test_project)
+
+add_subdirectory(ModA)
+add_subdirectory(ModB)
+add_subdirectory(ModC)
+
+add_executable(main main.cpp)
+target_link_libraries(main 
+	PRIVATE 
+	  ModA ModB)
+```
+
+```
+------------------------------------
+ModA/CMakeLists.txt
+------------------------------------
+add_library(ModA  a.cc)
+target_include_directories(ModA 
+	PUBLIC
+	  public_includes)
+target_link_libraries(ModA PRIVATE ModC)
+```
+
+```
+------------------------------------
+ModB/CMakeLists.txt
+------------------------------------
+add_library(ModB b.cc)
+target_include_directories(ModB 
+	PUBLIC 
+	  public_includes)
+target_link_libraries(ModB PRIVATE ModC)
+```
+
+```
+------------------------------------
+ModC/CMakeLists.txt
+------------------------------------
+add_library(ModC c.cc)
+target_include_directories(ModC 
+	PUBLIC 
+	  public_includes)
+```
